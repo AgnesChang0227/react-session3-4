@@ -1,6 +1,6 @@
-
+import React from "react";
 import ExpenseDate from "./ExpenseDate";//import separate component
-import Card from "./Card";
+import Card from "../UI/Card";
 import "./ExpenseItem.css";//import css
 
 //app.js 會傳送一個object過來 => props

@@ -1,5 +1,6 @@
+import React from "react";
 //import other components
-import Expenses from "./components/Expenses";
+import Expenses from "./components/Expenses/Expenses";
 
 //Main component
 function App() {

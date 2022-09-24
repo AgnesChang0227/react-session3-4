@@ -1,3 +1,4 @@
+import React from "react";
 import "./Card.css"
 //wrapper component => 含有css包裝的 component
 const Card = (props) => {
