@@ -2,18 +2,22 @@ import "./ExpenseItem.css";//import css
 
 //app.js 會傳送一個object過來 => props
 const ExpenseItem = (props) => {
-    return (//return沒有()就只會return 一行
-        //在div配置className，以使用css中的style
+    const month = props.date.toLocaleString('en-US',{month:"long"});
+    const day = props.date.toLocaleString('en-US',{day:"2-digit"});
+    const year = props.date.getFullYear();
+
+    return (
         <div className="expense-item">
-            {/*在{}中放入props.attribute*/}
-            <div>{props.date.toISOString()}</div>
+            <div>
+                <div>{month}</div>
+                <div>{year}</div>
+                <div>{day}</div>
+            </div>
             <div className="expense-item__description">
-                {/*用{}放入JS code => string  */}
                 <h2>{props.title}</h2>
-                {/*放入number的話 要用${} */}
                 <div className="expense-item__price">${props.amount}</div>
             </div>
         </div>
-    )//因此要用()括起來
+    )
 }
 export default ExpenseItem;
