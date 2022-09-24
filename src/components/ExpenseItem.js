@@ -1,18 +1,12 @@
 import "./ExpenseItem.css";//import css
+import ExpenseDate from "./ExpenseDate";//import separate component
 
 //app.js 會傳送一個object過來 => props
 const ExpenseItem = (props) => {
-    const month = props.date.toLocaleString('en-US',{month:"long"});
-    const day = props.date.toLocaleString('en-US',{day:"2-digit"});
-    const year = props.date.getFullYear();
-
     return (
         <div className="expense-item">
-            <div>
-                <div>{month}</div>
-                <div>{year}</div>
-                <div>{day}</div>
-            </div>
+            {/*放入component*/}
+            <ExpenseDate date={props.date}/>
             <div className="expense-item__description">
                 <h2>{props.title}</h2>
                 <div className="expense-item__price">${props.amount}</div>
